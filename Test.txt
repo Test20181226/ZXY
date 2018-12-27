@@ -1,1 +1,62 @@
 hello
+
+
+Git add    将本地文件，增加到暂存区
+Git commit  将暂存区文件提交到本地库
+Git push   将本地库文件推送到远程仓库
+Git pull   将远程库文件获取到本地
+
+默认分支   master
+
+安装
+msysgit.github.io
+
+配置path
+bin目录
+配置git   用户名，邮箱
+右键-git bash
+git config --global user.name "name"
+git config --global user.email "name@qq.com"
+
+搭建git服务器     统一仓库github.com
+
+
+
+
+免秘钥登录，配置SSH
+本地生成ssh
+ssh-keygen -t rsa -C 邮箱
+发送给远程：
+登录远程后，settings SSH and GPG keys  new    将本地生成的id_rsa.pub内容复制到远程Key中
+
+
+测试连通性
+ssh -T git@github.com
+
+项目管理
+本地新建项目
+项目根目录右键，git init
+
+远程简历git项目
+new 建立项目  标识符
+
+关联
+git remote add origin 标识符
+
+
+发布项目
+git add .        //本地文件发送到暂存区
+git commit -m “注释内容”    //暂存区到本地库
+git push -u origin master
+
+下载本地
+git clone 标识符
+
+更新提交
+git add .        //本地文件发送到暂存区
+git commit -m “注释内容”    //暂存区到本地库
+git push origin master
+
+本地更新
+git pull
+
